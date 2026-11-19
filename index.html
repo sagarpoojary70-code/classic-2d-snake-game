@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🐍 Snake Game</h1>
+
+        <div class="score">
+            Score: <span id="score">0</span>
+        </div>
+
+        <div class="game-area">
+
+            <canvas id="gameCanvas"
+                    width="400"
+                    height="400">
+            </canvas>
+
+            <!-- Start Screen -->
+            <div id="startScreen" class="overlay">
+                <h2>Welcome to Snake Game!</h2>
+                <p>Eat food and grow your snake.</p>
+                <button onclick="startGame()">
+                    Start Game
+                </button>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="gameOver" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <button onclick="restartGame()">
+                    Play Again
+                </button>
+            </div>
+
+        </div>
+
+        <p>Use Arrow Keys to Move</p>
+
+        <p id="speedLevel">Speed Level: 1</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
